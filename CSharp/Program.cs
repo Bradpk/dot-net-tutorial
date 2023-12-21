@@ -5,13 +5,14 @@
 
 // app.Run();
 using System;
+using Microsoft.Extensions.ObjectPool;
 
 
 string? name;
 string? operation;
-int num1;
-int num2; 
-int answer = 0;
+double num1;
+double num2; 
+double answer = 0;
 
 Console.WriteLine("Calculator Nation!");
 Console.WriteLine("What is your name?");
@@ -23,10 +24,10 @@ Console.WriteLine("Type - for Substract, Type + for Addition, Type x for Multipl
 operation = Console.ReadLine();
 
 Console.WriteLine("Pick First Number?");
-num1 = Convert.ToInt32(Console.ReadLine());
+num1 = Convert.ToDouble(Console.ReadLine());
 
 Console.WriteLine("Pick Second Number?");
-num2 = Convert.ToInt32(Console.ReadLine());
+num2 = Convert.ToDouble(Console.ReadLine());
 
 
 
@@ -54,3 +55,5 @@ Console.WriteLine("Type Y for Yes, Type N for No");
 } while (Console.ReadLine()?.ToUpper() == "Y");
 
 Console.WriteLine("Okie Dokie, Cya Later!");
+
+
